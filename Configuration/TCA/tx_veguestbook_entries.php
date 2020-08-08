@@ -14,7 +14,7 @@ return [
         'enablecolumns' => [
             'disabled' => 'hidden',
         ],
-        'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('ve_guestbook') . 'Resources/Public/Icons/icon_tx_veguestbook_entries.gif',
+        'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('ve_guestbook') . 'Resources/Public/Icons/icon_tx_veguestbook_entries.gif',
         'searchFields' => 'firstname,surname,email,homepage,place,entry,entrycomment,remote_addr'
     ],
     'interface' => [
