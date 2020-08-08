@@ -1,5 +1,9 @@
-# TYPO3 ve_guestbook extension
+# Obsolete - ve_guestbook is not maintained anymore.
 
-[![TYPO3](https://img.shields.io/badge/TYPO3-7.6.0-orange.svg?style=flat-square)](https://typo3.org/)
+Migration to nitsan guestbook (without comments and remote_addr):
 
-ve_guestbook is the most downloaded guestbook extension for TYPO3.
+```SQL
+INSERT INTO tx_nsguestbook_domain_model_nsguestbook (uid, pid, sys_language_uid, tstamp, crdate, cruser_id, deleted, hidden, name, email, website, city, message)
+SELECT uid, pid, sys_language_uid, tstamp, crdate, cruser_id, deleted, hidden, CONCAT(firstname," ",surname), email, homepage, place, entry
+FROM tx_veguestbook_entries
+```
